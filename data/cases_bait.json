@@ -1,0 +1,215 @@
+[
+  {
+    "caseId": "easy_fake_airdrop",
+    "caseTitle": "無料エアドロップの甘い罠",
+    "caseDifficulty": "easy",
+    "caseType": "phishing",
+    "announcementIndex": 0,
+    "text": "公式を装ったアカウントから「限定エアドロップ」のDMが届いた。リンク先でウォレット接続を求められている。",
+    "type": "BAIT",
+    "tone": "urgent",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "公式プロジェクトがDMでエアドロップを告知することはほぼない。",
+      "無料で資産を配るという話は99%詐欺。ウォレット接続=資産流出の入り口。"
+    ]
+  },
+  {
+    "caseId": "easy_fake_support",
+    "caseTitle": "偽サポートの親切な声",
+    "caseDifficulty": "easy",
+    "caseType": "social_engineering",
+    "announcementIndex": 0,
+    "text": "「サポートチームです。問題解決のためシードフレーズを教えてください」とDMが来た。",
+    "type": "BAIT",
+    "tone": "friendly",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "正規のサポートがシードフレーズを聞くことは絶対にない。",
+      "シードフレーズ=マスターキー。教えた瞬間、全資産へのアクセス権を渡すことになる。"
+    ]
+  },
+  {
+    "caseId": "easy_pump_dump",
+    "caseTitle": "1000倍確定コイン",
+    "caseDifficulty": "easy",
+    "caseType": "pump_dump",
+    "announcementIndex": 0,
+    "text": "「インサイダー情報。明日CEX上場で100倍確定。今買えば億り人」とメッセージが流れてきた。",
+    "type": "BAIT",
+    "tone": "euphoric",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "「確定」「インサイダー」という言葉は詐欺の典型的なシグナル。",
+      "本当のインサイダー情報を見知らぬ人に共有する理由はない。あなたが出口流動性にされる。"
+    ]
+  },
+  {
+    "caseId": "easy_fake_website",
+    "caseTitle": "そっくりな偽サイト",
+    "caseDifficulty": "easy",
+    "caseType": "phishing",
+    "announcementIndex": 0,
+    "text": "サイトの見た目は本物そっくりだが、URLが「uniswep.com」になっている。ウォレット接続を促すポップアップが出ている。",
+    "type": "BAIT",
+    "tone": "tempting",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "Google広告には詐欺サイトが紛れ込むことがある。URLを必ず確認すること。",
+      "ブックマークから公式サイトにアクセスする習慣が資産を守る。"
+    ]
+  },
+  {
+    "caseId": "medium_honeypot",
+    "caseTitle": "売れないトークンの罠",
+    "caseDifficulty": "medium",
+    "caseType": "honeypot",
+    "announcementIndex": 2,
+    "text": "試しに少額を売ろうとすると「TRANSFER_FROM_FAILED」エラー。コントラクトに売却ブロック機能が仕込まれていた。",
+    "type": "BAIT",
+    "tone": "cryptic",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "Honeypotは買いだけを許可し売りをブロックするスマートコントラクト詐欺。",
+      "購入前にHoneypot Checkerツールでコントラクトを確認する習慣が必要。"
+    ]
+  },
+  {
+    "caseId": "medium_rug_migration",
+    "caseTitle": "V2移行という名の脱出劇",
+    "caseDifficulty": "medium",
+    "caseType": "rugpull",
+    "announcementIndex": 1,
+    "text": "移行サイトにアクセスすると、無制限のトークン承認を求められた。",
+    "type": "BAIT",
+    "tone": "tempting",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "緊急のV2移行は詐欺の常套手段。焦らせて判断力を奪う。",
+      "無制限承認(Unlimited Approval)は全資産へのアクセス権を与えることと同じ。"
+    ]
+  },
+  {
+    "caseId": "medium_fake_partnership",
+    "caseTitle": "大手提携の虚偽発表",
+    "caseDifficulty": "medium",
+    "caseType": "market_manipulation",
+    "announcementIndex": 2,
+    "text": "チームウォレットから大量のトークンがCEXに送金されているのがオンチェーンで確認された。",
+    "type": "BAIT",
+    "tone": "cryptic",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "大手企業との提携は双方から発表されるもの。片方だけの発表は疑うべき。",
+      "虚偽発表で価格を吊り上げ、インサイダーが売り抜ける手口は古典的だが今も頻発。"
+    ]
+  },
+  {
+    "caseId": "medium_compromised_discord",
+    "caseTitle": "乗っ取られた公式Discord",
+    "caseDifficulty": "medium",
+    "caseType": "discord_phishing",
+    "announcementIndex": 1,
+    "text": "リンク先でウォレットを接続し、ミントボタンを押すとsetApprovalForAllの署名を求められた。",
+    "type": "BAIT",
+    "tone": "tempting",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "Discordサーバーはモデレーターのアカウント乗っ取りで侵害されることがある。",
+      "setApprovalForAllは全NFTへのアクセス権を与える危険な署名。ミントには不要。"
+    ]
+  },
+  {
+    "caseId": "hard_slow_rug",
+    "caseTitle": "緩やかな死 - ソフトラグ",
+    "caseDifficulty": "hard",
+    "caseType": "soft_rug",
+    "announcementIndex": 4,
+    "text": "創業者が「個人的な事情」を理由にプロジェクトから離脱を発表。残ったのは匿名のモデレーターだけ。",
+    "type": "BAIT",
+    "tone": "hushed",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "ソフトラグは一気に逃げず、時間をかけて資金を抜く手法。発見が難しい。",
+      "チームウォレットの動きを定期的に監視し、売却パターンを把握することが重要。",
+      "「マーケティング」「運営費」名目の売却は累積すると巨額になることがある。"
+    ]
+  },
+  {
+    "caseId": "hard_flash_loan_attack",
+    "caseTitle": "瞬殺のフラッシュローン",
+    "caseDifficulty": "hard",
+    "caseType": "exploit",
+    "announcementIndex": 2,
+    "text": "プロトコルのTVLが1ブロックで50Mから0になった。Twitterは沈黙。",
+    "type": "BAIT",
+    "tone": "cryptic",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "監査はバグがないことの保証ではない。監査後に追加された機能が脆弱性を生むこともある。",
+      "フラッシュローン攻撃は1トランザクションで完了し、発生後の対処は不可能。",
+      "オラクル依存のプロトコルは価格操作リスクを常に抱えている。"
+    ]
+  },
+  {
+    "caseId": "hard_insider_trading",
+    "caseTitle": "見えない手 - インサイダー売り抜け",
+    "caseDifficulty": "hard",
+    "caseType": "insider_trading",
+    "announcementIndex": 4,
+    "text": "次の「大型発表」が予告された。直後にチーム関連ウォレットがCEXに大量送金を開始。",
+    "type": "BAIT",
+    "tone": "sirens",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "発表前の不自然な価格変動はインサイダー取引のサイン。",
+      "チームウォレットとCEX送金のタイミングを監視することで売り抜けを予測できる。",
+      "一度パターンが確認されたプロジェクトは繰り返す傾向がある。"
+    ]
+  },
+  {
+    "caseId": "hard_governance_attack",
+    "caseTitle": "民主主義の武器化 - ガバナンス攻撃",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 4,
+    "text": "提案実行。Treasury全額が攻撃者ウォレットに移動し、即座にCEXへ送金された。",
+    "type": "BAIT",
+    "tone": "sirens",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "ガバナンス提案は技術的な文言に悪意が隠されていることがある。",
+      "投票前の大量トークン購入は攻撃の前兆。Snapshot時点のホルダーを確認すべき。",
+      "DAOの意思決定は民主的だが、トークン集中により操作可能。"
+    ]
+  },
+  {
+    "caseId": "hard_bridge_exploit",
+    "caseTitle": "橋の崩壊 - ブリッジエクスプロイト",
+    "caseDifficulty": "hard",
+    "caseType": "bridge_exploit",
+    "announcementIndex": 3,
+    "text": "ブリッジのTVLが3億ドルから0になった。複数チェーンで同時に資金が流出。",
+    "type": "BAIT",
+    "tone": "cryptic",
+    "isRugged": true,
+    "gain": 0,
+    "learn": [
+      "ブリッジは複数チェーンの資産を集約するため、ハッキング時の被害が甚大。",
+      "バリデーター要件の変更は重大なセキュリティ変更。見逃してはいけない。",
+      "「対応済み」の返答が本当に対応済みとは限らない。コードを確認できないなら信用しない。"
+    ]
+  }
+]

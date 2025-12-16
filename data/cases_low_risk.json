@@ -1,0 +1,98 @@
+[
+  {
+    "caseId": "easy_pump_dump",
+    "caseTitle": "1000倍確定コイン",
+    "caseDifficulty": "easy",
+    "caseType": "pump_dump",
+    "announcementIndex": 1,
+    "text": "トークンのコントラクトを確認すると、売却時に99%の税金が設定されていた。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 4
+  },
+  {
+    "caseId": "medium_honeypot",
+    "caseTitle": "売れないトークンの罠",
+    "caseDifficulty": "medium",
+    "caseType": "honeypot",
+    "announcementIndex": 1,
+    "text": "DEXで買い注文を出すと問題なく通った。これは本物かもしれない。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "tempting",
+    "isRugged": false,
+    "gain": 8
+  },
+  {
+    "caseId": "medium_fake_partnership",
+    "caseTitle": "大手提携の虚偽発表",
+    "caseDifficulty": "medium",
+    "caseType": "market_manipulation",
+    "announcementIndex": 1,
+    "text": "Microsoftの公式発表を確認しようとするが、どこにも見つからない。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 5
+  },
+  {
+    "caseId": "hard_slow_rug",
+    "caseTitle": "緩やかな死 - ソフトラグ",
+    "caseDifficulty": "hard",
+    "caseType": "soft_rug",
+    "announcementIndex": 1,
+    "text": "よく見るとアップデートは既存機能の言い換えばかり。新機能は半年間リリースされていない。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 5
+  },
+  {
+    "caseId": "hard_flash_loan_attack",
+    "caseTitle": "瞬殺のフラッシュローン",
+    "caseDifficulty": "hard",
+    "caseType": "exploit",
+    "announcementIndex": 1,
+    "text": "オラクル価格の更新頻度が他のプロトコルより低いことにトレーダーが気づき始めた。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 4
+  },
+  {
+    "caseId": "hard_insider_trading",
+    "caseTitle": "見えない手 - インサイダー売り抜け",
+    "caseDifficulty": "hard",
+    "caseType": "insider_trading",
+    "announcementIndex": 1,
+    "text": "発表直後に大量の売りが入り、発表前の価格まで戻った。買いを入れたのは一般投資家だけだった。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "tempting",
+    "isRugged": false,
+    "gain": 5
+  },
+  {
+    "caseId": "hard_governance_attack",
+    "caseTitle": "民主主義の武器化 - ガバナンス攻撃",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 3,
+    "text": "「パートナーウォレット」のアドレスを調べると、攻撃者本人のものだった。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "tempting",
+    "isRugged": false,
+    "gain": 5
+  },
+  {
+    "caseId": "hard_bridge_exploit",
+    "caseTitle": "橋の崩壊 - ブリッジエクスプロイト",
+    "caseDifficulty": "hard",
+    "caseType": "bridge_exploit",
+    "announcementIndex": 1,
+    "text": "バリデーターの署名要件が5/9から3/9に変更される提案が静かに可決されていた。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "hushed",
+    "isRugged": false,
+    "gain": 6
+  }
+]

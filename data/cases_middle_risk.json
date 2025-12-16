@@ -1,0 +1,98 @@
+[
+  {
+    "caseId": "medium_honeypot",
+    "caseTitle": "売れないトークンの罠",
+    "caseDifficulty": "medium",
+    "caseType": "honeypot",
+    "announcementIndex": 0,
+    "text": "Telegramで話題のトークン。チャートは10倍上昇中。コミュニティは盛り上がっている。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "euphoric",
+    "isRugged": false,
+    "gain": 15
+  },
+  {
+    "caseId": "medium_rug_migration",
+    "caseTitle": "V2移行という名の脱出劇",
+    "caseDifficulty": "medium",
+    "caseType": "rugpull",
+    "announcementIndex": 0,
+    "text": "「技術的問題により緊急でV2へ移行します。旧トークンは24時間後に無効化」と運営から発表。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "urgent",
+    "isRugged": false,
+    "gain": 5
+  },
+  {
+    "caseId": "medium_compromised_discord",
+    "caseTitle": "乗っ取られた公式Discord",
+    "caseDifficulty": "medium",
+    "caseType": "discord_phishing",
+    "announcementIndex": 0,
+    "text": "公式アナウンスチャンネルに「サプライズNFTミント開始！先着500名」と投稿された。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "urgent",
+    "isRugged": false,
+    "gain": 10
+  },
+  {
+    "caseId": "hard_slow_rug",
+    "caseTitle": "緩やかな死 - ソフトラグ",
+    "caseDifficulty": "hard",
+    "caseType": "soft_rug",
+    "announcementIndex": 2,
+    "text": "チームウォレットから毎週少額ずつトークンが売却されている。1回の量は目立たない。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "cryptic",
+    "isRugged": false,
+    "gain": 8
+  },
+  {
+    "caseId": "hard_insider_trading",
+    "caseTitle": "見えない手 - インサイダー売り抜け",
+    "caseDifficulty": "hard",
+    "caseType": "insider_trading",
+    "announcementIndex": 0,
+    "text": "大型発表の24時間前から価格が上昇し始めた。公式発表はまだない。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 12
+  },
+  {
+    "caseId": "hard_insider_trading",
+    "caseTitle": "見えない手 - インサイダー売り抜け",
+    "caseDifficulty": "hard",
+    "caseType": "insider_trading",
+    "announcementIndex": 3,
+    "text": "チームは「たまたま」と説明。しかし同じパターンが過去3回の発表でも確認された。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "hushed",
+    "isRugged": false,
+    "gain": 8
+  },
+  {
+    "caseId": "hard_governance_attack",
+    "caseTitle": "民主主義の武器化 - ガバナンス攻撃",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 1,
+    "text": "投票開始直前に単一ウォレットが大量のガバナンストークンを購入した。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 7
+  },
+  {
+    "caseId": "hard_bridge_exploit",
+    "caseTitle": "橋の崩壊 - ブリッジエクスプロイト",
+    "caseDifficulty": "hard",
+    "caseType": "bridge_exploit",
+    "announcementIndex": 2,
+    "text": "セキュリティ研究者が「署名検証に潜在的な問題がある」とツイート。運営は「対応済み」と返答。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "uncertain",
+    "isRugged": false,
+    "gain": 8
+  }
+]
