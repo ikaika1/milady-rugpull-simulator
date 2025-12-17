@@ -1,16 +1,35 @@
 {
   "accountAssociation": {
-    "header": "eyJmaWQiOjAsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn0",
-    "payload": "eyJkb21haW4iOiJ5b3VyLWRvbWFpbi5jb20ifQ",
-    "signature": "REPLACE_WITH_YOUR_SIGNATURE"
+    "header": "eyJmaWQiOjE5NTkyOCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDhlM2NlQWU3YzdhYTMzRTlBOUU2MDZjMWM5ZTU2M0YyMjQ5NmJEMTIifQ",
+    "payload": "eyJkb21haW4iOiJtaWxhZHktcnVncHVsbC1zaW11bGF0b3IudmVyY2VsLmFwcCJ9",
+    "signature": "7mKDKkllybeq7ld8w8TvAUjvmuVviyolYwZ7g5i/7vcBpFyscOWDo20hMeBzuFOu9WOeTDTlRWn9FPEWchl3hxs="
   },
-  "frame": {
+  "miniapp": {
     "version": "1",
-    "name": "MILADY-RAGUPULL-SIMULATOR",
-    "iconUrl": "https://your-domain.com/icon.png",
-    "splashImageUrl": "https://your-domain.com/splash.png",
+    "name": "MILADY RUGPULL SIMULATOR",
+    "homeUrl": "https://ex.co",
+    "iconUrl": "https://ex.co/i.png",
+    "splashImageUrl": "https://ex.co/l.png",
     "splashBackgroundColor": "#000000",
-    "homeUrl": "https://your-domain.com"
+    "webhookUrl": "https://ex.co/api/webhook",
+    "subtitle": "Fast, fun, social",
+    "description": "A fast, fun way to challenge friends in real time.",
+    "screenshotUrls": [
+      "https://ex.co/s1.png",
+      "https://ex.co/s2.png",
+      "https://ex.co/s3.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "example",
+      "miniapp",
+      "baseapp"
+    ],
+    "heroImageUrl": "https://ex.co/og.png",
+    "tagline": "Play instantly",
+    "ogTitle": "Example Mini App",
+    "ogDescription": "Challenge friends in real time.",
+    "ogImageUrl": "https://ex.co/og.png",
+    "noindex": true
   }
 }
-

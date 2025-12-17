@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { sdk } from '@farcaster/miniapp-sdk'
 import ActionButtons from '@/components/ActionButtons'
 import RuggedModal from '@/components/RuggedModal'
 import SoldModal from '@/components/SoldModal'
@@ -37,6 +38,11 @@ export default function PlayPage() {
   const [pulseChart, setPulseChart] = useState(false)
   const [showCompletionChoice, setShowCompletionChoice] = useState(false)
 
+  // Farcaster MiniApp SDK の初期化
+  useEffect(() => {
+    sdk.actions.ready()
+  }, [])
+
   // 初回マウント時にシナリオを生成
   useEffect(() => {
     if (scenarios.length === 0) {
@@ -58,7 +64,8 @@ export default function PlayPage() {
 
   useEffect(() => {
     if (gameState.status === 'RUGGED') {
-      const timer = setTimeout(() => setShowRugged(true), 400)
+      // 暴落チャートを眺める時間を確保するため遅延を長めに設定
+      const timer = setTimeout(() => setShowRugged(true), 2000)
       return () => clearTimeout(timer)
     }
     setShowRugged(false)
