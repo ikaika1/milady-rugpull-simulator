@@ -65,7 +65,7 @@ export default function PlayPage() {
   useEffect(() => {
     if (gameState.status === 'RUGGED') {
       // 暴落チャートを眺める時間を確保するため遅延を長めに設定
-      const timer = setTimeout(() => setShowRugged(true), 2000)
+      const timer = setTimeout(() => setShowRugged(true), 600)
       return () => clearTimeout(timer)
     }
     setShowRugged(false)

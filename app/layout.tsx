@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   other: {
     'fc:miniapp': JSON.stringify({
       version: 'next',
-      imageUrl: `${APP_URL}/og.png`,
+      imageUrl: `${APP_URL}/images/bag_zero.png`,
       button: {
         title: 'Launch RUGPULL SIM',
         action: {
           type: 'launch_miniapp',
           name: 'MILADY RUGPULL SIMULATOR',
           url: APP_URL,
-          splashImageUrl: `${APP_URL}/splash.png`,
+          splashImageUrl: `${APP_URL}/images/bag_zero.png`,
           splashBackgroundColor: '#000000',
         },
       },
