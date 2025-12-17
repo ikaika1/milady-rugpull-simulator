@@ -9,8 +9,17 @@ interface ActionButtonsProps {
 }
 
 export default function ActionButtons({ announcement, onAction, disabled = false }: ActionButtonsProps) {
+  const playSound = () => {
+    const audio = new Audio('/sound/register.mp3')
+    audio.volume = 0.5
+    audio.play().catch(() => {
+      // 自動再生がブロックされた場合は無視
+    })
+  }
+
   const handleClick = (choice: ActionChoice) => {
     if (disabled) return
+    playSound()
     onAction(choice)
   }
 

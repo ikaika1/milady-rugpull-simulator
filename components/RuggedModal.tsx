@@ -15,9 +15,19 @@ export default function RuggedModal({ announcement, tokenName, onRetry }: Rugged
   const [phase, setPhase] = useState<'glitch' | 'message' | 'actions'>('glitch')
   const [showLearn, setShowLearn] = useState(false)
 
+  // bomb.mp3を再生
   useEffect(() => {
-    const timer1 = setTimeout(() => setPhase('message'), 450)
-    const timer2 = setTimeout(() => setPhase('actions'), 1200)
+    const audio = new Audio('/sound/bomb.mp3')
+    audio.volume = 0.7
+    audio.play().catch(() => {
+      // 自動再生がブロックされた場合は無視
+    })
+  }, [])
+
+  useEffect(() => {
+    // アニメーションを長めに表示
+    const timer1 = setTimeout(() => setPhase('message'), 1500)
+    const timer2 = setTimeout(() => setPhase('actions'), 3000)
 
     return () => {
       clearTimeout(timer1)

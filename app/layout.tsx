@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'SAFE OR ZERO',
+  title: 'MILADY RUGPULL SIMULATOR',
   description: 'Deterministic safety decision simulator - 実例ベースのラグプル/ハック教育シミュレーター',
   icons: {
     icon: '/icon.png',
