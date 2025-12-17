@@ -9,7 +9,6 @@
     "type": "BAIT",
     "tone": "urgent",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "公式プロジェクトがDMでエアドロップを告知することはほぼない。",
       "無料で資産を配るという話は99%詐欺。ウォレット接続=資産流出の入り口。"
@@ -25,7 +24,6 @@
     "type": "BAIT",
     "tone": "friendly",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "正規のサポートがシードフレーズを聞くことは絶対にない。",
       "シードフレーズ=マスターキー。教えた瞬間、全資産へのアクセス権を渡すことになる。"
@@ -41,7 +39,6 @@
     "type": "BAIT",
     "tone": "euphoric",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "「確定」「インサイダー」という言葉は詐欺の典型的なシグナル。",
       "本当のインサイダー情報を見知らぬ人に共有する理由はない。あなたが出口流動性にされる。"
@@ -57,7 +54,6 @@
     "type": "BAIT",
     "tone": "tempting",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "Google広告には詐欺サイトが紛れ込むことがある。URLを必ず確認すること。",
       "ブックマークから公式サイトにアクセスする習慣が資産を守る。"
@@ -73,7 +69,6 @@
     "type": "BAIT",
     "tone": "cryptic",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "Honeypotは買いだけを許可し売りをブロックするスマートコントラクト詐欺。",
       "購入前にHoneypot Checkerツールでコントラクトを確認する習慣が必要。"
@@ -89,7 +84,6 @@
     "type": "BAIT",
     "tone": "tempting",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "緊急のV2移行は詐欺の常套手段。焦らせて判断力を奪う。",
       "無制限承認(Unlimited Approval)は全資産へのアクセス権を与えることと同じ。"
@@ -105,7 +99,6 @@
     "type": "BAIT",
     "tone": "cryptic",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "大手企業との提携は双方から発表されるもの。片方だけの発表は疑うべき。",
       "虚偽発表で価格を吊り上げ、インサイダーが売り抜ける手口は古典的だが今も頻発。"
@@ -121,7 +114,6 @@
     "type": "BAIT",
     "tone": "tempting",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "Discordサーバーはモデレーターのアカウント乗っ取りで侵害されることがある。",
       "setApprovalForAllは全NFTへのアクセス権を与える危険な署名。ミントには不要。"
@@ -137,7 +129,6 @@
     "type": "BAIT",
     "tone": "hushed",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "ソフトラグは一気に逃げず、時間をかけて資金を抜く手法。発見が難しい。",
       "チームウォレットの動きを定期的に監視し、売却パターンを把握することが重要。",
@@ -154,7 +145,6 @@
     "type": "BAIT",
     "tone": "cryptic",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "監査はバグがないことの保証ではない。監査後に追加された機能が脆弱性を生むこともある。",
       "フラッシュローン攻撃は1トランザクションで完了し、発生後の対処は不可能。",
@@ -171,7 +161,6 @@
     "type": "BAIT",
     "tone": "sirens",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "発表前の不自然な価格変動はインサイダー取引のサイン。",
       "チームウォレットとCEX送金のタイミングを監視することで売り抜けを予測できる。",
@@ -188,7 +177,6 @@
     "type": "BAIT",
     "tone": "sirens",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "ガバナンス提案は技術的な文言に悪意が隠されていることがある。",
       "投票前の大量トークン購入は攻撃の前兆。Snapshot時点のホルダーを確認すべき。",
@@ -205,11 +193,160 @@
     "type": "BAIT",
     "tone": "cryptic",
     "isRugged": true,
-    "gain": 0,
     "learn": [
       "ブリッジは複数チェーンの資産を集約するため、ハッキング時の被害が甚大。",
       "バリデーター要件の変更は重大なセキュリティ変更。見逃してはいけない。",
       "「対応済み」の返答が本当に対応済みとは限らない。コードを確認できないなら信用しない。"
+    ]
+  },
+  {
+    "caseId": "bait_onecoin_ponzi",
+    "caseTitle": "OneCoin Ponzi",
+    "caseDifficulty": "extreme",
+    "caseType": "ponzi",
+    "announcementIndex": 4,
+    "text": "OneCoin は実体のないブロックチェーンを謳い大量資金を集めた後に消失した。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "実体のないプロジェクトは詐欺である可能性が高い。",
+      "投資者資金が戻らないパターンが典型。"
+    ]
+  },
+  {
+    "caseId": "bait_thodex_exit_scam",
+    "caseTitle": "Thodex Exit Scam",
+    "caseDifficulty": "extreme",
+    "caseType": "exchange_exit",
+    "announcementIndex": 4,
+    "text": "Thodex が運営停止しユーザー資金が引出不能となった。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "取引所の急閉鎖は詐欺の可能性が高い。",
+      "資金保全がされない事例。"
+    ]
+  },
+  {
+    "caseId": "bait_bitconnect_rugpull",
+    "caseTitle": "BitConnect ラグプル",
+    "caseDifficulty": "extreme",
+    "caseType": "ponzi_platform",
+    "announcementIndex": 4,
+    "text": "BitConnect は高利回りを保証すると宣伝し急騰の後に暴落した。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "保証高利は詐欺サインの典型。",
+      "価格回復が見込めないケース。"
+    ]
+  },
+  {
+    "caseId": "bait_plustoken_wallet_scam",
+    "caseTitle": "PlusToken ウォレット詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "wallet_ponzi",
+    "announcementIndex": 4,
+    "text": "PlusToken のウォレット詐欺で大量資金が失われた。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "ウォレット詐欺は資金復旧が困難。",
+      "誘引型高利は疑うべき。"
+    ]
+  },
+  {
+    "caseId": "bait_mirror_trading_international",
+    "caseTitle": "Mirror Trading Intl 詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "ponzi_scheme",
+    "announcementIndex": 4,
+    "text": "Mirror Trading International が大規模詐欺として報告されている。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "大規模詐欺は回収不可になる場合が多い。",
+      "仕組みの透明性が皆無。"
+    ]
+  },
+  {
+    "caseId": "bait_centra_tech_ico",
+    "caseTitle": "Centra Tech ICO 偽 ICO",
+    "caseDifficulty": "extreme",
+    "caseType": "ico_scam",
+    "announcementIndex": 4,
+    "text": "Centra Tech ICO が偽 ICO と判定され資金が失われた。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "偽 ICO は詐欺構造が明確であり投資者損失が大きい。",
+      "透明性がほぼない。"
+    ]
+  },
+  {
+    "caseId": "bait_gainbitcoin_ponzi",
+    "caseTitle": "GainBitcoin Ponzi",
+    "caseDifficulty": "extreme",
+    "caseType": "bitcoin_ponzi",
+    "announcementIndex": 4,
+    "text": "GainBitcoin が高利誘引詐欺として報告されている。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "高利誘引は詐欺サイン。",
+      "投資者資金が戻らない場合が多い。"
+    ]
+  },
+  {
+    "caseId": "bait_fake_memecoin_scam",
+    "caseTitle": "偽 MemeCoin 詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "memecoin_scam",
+    "announcementIndex": 4,
+    "text": "SNS 偽情報で煽られた偽 MemeCoin が急騰後消失した。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "SNS の偽宣伝は詐欺の手口として頻出。",
+      "資金が戻らない場合が多い。"
+    ]
+  },
+  {
+    "caseId": "bait_exchange_fake_listing",
+    "caseTitle": "偽上場情報詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "exchange_fake",
+    "announcementIndex": 4,
+    "text": "偽の上場情報で煽られたトークンが価格暴落している。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "偽上場情報は詐欺の典型。\"",
+      "信頼できる発表元の確認が必須。"
+    ]
+  },
+  {
+    "caseId": "bait rugpull_initial_liquidity_shrug",
+    "caseTitle": "初期流動性消失ラグプル",
+    "caseDifficulty": "extreme",
+    "caseType": "liquidity_rugpull",
+    "announcementIndex": 4,
+    "text": "初期の流動性が突然消失し価格がゼロに近い値になっている。",
+    "type": "BAIT",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "初期流動性消失はラグプル確定サインとなりやすい。",
+      "資金の回収は極めて困難。"
     ]
   }
 ]

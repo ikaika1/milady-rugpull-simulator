@@ -8,8 +8,7 @@
     "text": "Telegramで話題のトークン。チャートは10倍上昇中。コミュニティは盛り上がっている。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "euphoric",
-    "isRugged": false,
-    "gain": 15
+    "isRugged": false
   },
   {
     "caseId": "medium_rug_migration",
@@ -20,8 +19,7 @@
     "text": "「技術的問題により緊急でV2へ移行します。旧トークンは24時間後に無効化」と運営から発表。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "urgent",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "medium_compromised_discord",
@@ -32,8 +30,7 @@
     "text": "公式アナウンスチャンネルに「サプライズNFTミント開始！先着500名」と投稿された。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "urgent",
-    "isRugged": false,
-    "gain": 10
+    "isRugged": false
   },
   {
     "caseId": "hard_slow_rug",
@@ -44,8 +41,7 @@
     "text": "チームウォレットから毎週少額ずつトークンが売却されている。1回の量は目立たない。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "cryptic",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "hard_insider_trading",
@@ -56,8 +52,7 @@
     "text": "大型発表の24時間前から価格が上昇し始めた。公式発表はまだない。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 12
+    "isRugged": false
   },
   {
     "caseId": "hard_insider_trading",
@@ -68,8 +63,7 @@
     "text": "チームは「たまたま」と説明。しかし同じパターンが過去3回の発表でも確認された。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "hushed",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "hard_governance_attack",
@@ -80,8 +74,7 @@
     "text": "投票開始直前に単一ウォレットが大量のガバナンストークンを購入した。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 7
+    "isRugged": false
   },
   {
     "caseId": "hard_bridge_exploit",
@@ -92,7 +85,216 @@
     "text": "セキュリティ研究者が「署名検証に潜在的な問題がある」とツイート。運営は「対応済み」と返答。",
     "type": "MIDDLE_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
+  },
+  {
+    "caseId": "middle_frosties_nft",
+    "caseTitle": "Frosties NFT Rug Pull 疑惑",
+    "caseDifficulty": "hard",
+    "caseType": "nft_rug_pull",
+    "announcementIndex": 2,
+    "text": "Frosties NFT で Discord や Twitter が閉鎖され、資金移動の疑いがある。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "コミュニティ消失は警戒サイン。",
+      "資金移動の動きがある場合はリスクが高まる。"
+    ]
+  },
+  {
+    "caseId": "middle_anubisdao_exit",
+    "caseTitle": "AnubisDAO 資金引き出し疑惑",
+    "caseDifficulty": "hard",
+    "caseType": "decentralized_project",
+    "announcementIndex": 2,
+    "text": "AnubisDAO の立ち上げ後すぐに開発者が資金を引き出したと噂される動きが出ている。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "運営者による資金操作はラグプル類似のリスク要素。",
+      "内部者売却疑惑がある場合は要注意。"
+    ]
+  },
+  {
+    "caseId": "middle_unverified_token_crash",
+    "caseTitle": "未監査トークン急騰後崩壊",
+    "caseDifficulty": "hard",
+    "caseType": "unverified_token",
+    "announcementIndex": 2,
+    "text": "未監査トークンが短期間で急騰し、その後価格が崩壊している。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "監査がないトークンはリスクが高い。",
+      "急騰後の価格崩壊は投機リスクを示す。"
+    ]
+  },
+  {
+    "caseId": "middle_broccoli_token",
+    "caseTitle": "Broccoli Token 急落",
+    "caseDifficulty": "hard",
+    "caseType": "memecoin_risk",
+    "announcementIndex": 2,
+    "text": "Broccoli Token が急騰後に大きく価格を下げている。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "大量保有者の売却が見られるとリスクが高まる。",
+      "流動性が低い MemeCoin は急落しやすい。"
+    ]
+  },
+  {
+    "caseId": "middle_sham_project_unmet",
+    "caseTitle": "白紙プロジェクト撤退・未達",
+    "caseDifficulty": "hard",
+    "caseType": "project_exit",
+    "announcementIndex": 2,
+    "text": "プロジェクトがロードマップ未達後に資金を移動した可能性がある。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "運営の透明性欠如はリスク要因になる。",
+      "ロードマップ未達は評価を下げる。"
+    ]
+  },
+  {
+    "caseId": "middle_nft_unmet_rewards",
+    "caseTitle": "NFT 約束未達・報酬崩壊",
+    "caseDifficulty": "hard",
+    "caseType": "nft_performance",
+    "announcementIndex": 2,
+    "text": "NFT で約束された特典が実現されず、価格が下落している。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "運営の実行力不足はリスクを高める。",
+      "未達成の公約は投資判断を難しくする。"
+    ]
+  },
+  {
+    "caseId": "middle_decentralized_exploit",
+    "caseTitle": "分散型プロジェクトの内部損失",
+    "caseDifficulty": "hard",
+    "caseType": "decentralized_risk",
+    "announcementIndex": 2,
+    "text": "分散型プロジェクトで内部資金が不正流出した疑いがある。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "内部アクセス権の集中はリスクになる。",
+      "フォレンジック追跡で一部救済があり得る例もある。"
+    ]
+  },
+  {
+    "caseId": "middle_yieldfarm_contract_flaw",
+    "caseTitle": "Yield Farm スマコン欠陥",
+    "caseDifficulty": "hard",
+    "caseType": "contract_risk",
+    "announcementIndex": 2,
+    "text": "Yield Farm のスマートコントラクトに欠陥が見つかり資金が失われた。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "コード欠陥はリスク要因として大きい。",
+      "監査がないと損失リスクが顕著になる。"
+    ]
+  },
+  {
+    "caseId": "middle_low_liquidity_exit",
+    "caseTitle": "低流動性プロジェクトの退出圧力",
+    "caseDifficulty": "hard",
+    "caseType": "liquidity_risk",
+    "announcementIndex": 2,
+    "text": "低流動性プールで大口退出が発生し価格が下がっている。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "低流動性は価格崩壊リスクを高める。",
+      "離脱圧力が強まると投資家損失が拡大する可能性。"
+    ]
+  },
+  {
+    "caseId": "middle_chain_reorg_anomaly",
+    "caseTitle": "チェーン再編異常",
+    "caseDifficulty": "hard",
+    "caseType": "chain_reorg",
+    "announcementIndex": 2,
+    "text": "ブロックチェーンで再編異常が発生し一時的に価格が乱高下している。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "技術的イベントは価格リスクを生む場合がある。",
+      "不安定性が長引くと投機リスクが増す。"
+    ]
+  },
+  {
+    "caseId": "middle_token_lock_break",
+    "caseTitle": "ロック解除後の売却圧",
+    "caseDifficulty": "hard",
+    "caseType": "token_unlock",
+    "announcementIndex": 2,
+    "text": "トークンのロックが解除された直後に大量売却が発生している。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "ロック解除は流動性急増をもたらす可能性。",
+      "市場圧力で価格が低迷するリスクがある。"
+    ]
+  },
+  {
+    "caseId": "middle_bridge_hack_loss",
+    "caseTitle": "クロスチェーンブリッジの損失",
+    "caseDifficulty": "hard",
+    "caseType": "bridge_exploit",
+    "announcementIndex": 2,
+    "text": "クロスチェーンブリッジで資金流出が発生し損失が計上されている。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "ブリッジはハッキングリスクを抱えやすい。",
+      "損失発生時の救済は限定的。"
+    ]
+  },
+  {
+    "caseId": "middle_token_team_dump",
+    "caseTitle": "内部者チーム売却圧",
+    "caseDifficulty": "hard",
+    "caseType": "team_selloff",
+    "announcementIndex": 2,
+    "text": "開発チームの保有トークンが売却され市場に流入している。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "内部者売却は需給の悪化を招きやすい。",
+      "透明性の欠如はリスク要因となる。"
+    ]
+  },
+  {
+    "caseId": "middle_fork_token_split",
+    "caseTitle": "フォークトークンの分裂",
+    "caseDifficulty": "hard",
+    "caseType": "token_fork",
+    "announcementIndex": 2,
+    "text": "フォークトークンの供給が二重化し市場で乱売が発生。",
+    "type": "MIDDLE_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "トークン分裂は需給を混乱させる場合がある。",
+      "不確実性が価格を揺らす。"
+    ]
   }
 ]

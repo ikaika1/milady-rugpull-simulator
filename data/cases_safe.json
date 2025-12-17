@@ -8,8 +8,7 @@
     "text": "プロジェクトの公式Twitterを確認すると、エアドロップの告知は一切ない。",
     "type": "SAFE",
     "tone": "calm",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "easy_fake_airdrop",
@@ -20,8 +19,7 @@
     "text": "DMのリンクをよく見ると、公式ドメインとは微妙に異なるスペルだった。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "easy_fake_support",
@@ -32,8 +30,7 @@
     "text": "公式チャンネルで確認すると「DMでサポートは行いません」と明記されていた。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 6
+    "isRugged": false
   },
   {
     "caseId": "easy_fake_support",
@@ -44,8 +41,7 @@
     "text": "相手のアカウントを見ると、作成日が昨日で投稿履歴がなかった。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 7
+    "isRugged": false
   },
   {
     "caseId": "easy_pump_dump",
@@ -56,8 +52,7 @@
     "text": "DEXScreenerで見ると、流動性はたった$500で、ホルダーは3人だけだった。",
     "type": "SAFE",
     "tone": "calm",
-    "isRugged": false,
-    "gain": 6
+    "isRugged": false
   },
   {
     "caseId": "easy_fake_website",
@@ -68,8 +63,7 @@
     "text": "URLをよく確認し、公式Twitterのリンクからアクセスし直した。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "easy_fake_website",
@@ -80,8 +74,7 @@
     "text": "ブラウザのセキュリティ拡張機能が「危険なサイト」と警告を出した。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "medium_honeypot",
@@ -92,8 +85,7 @@
     "text": "Token Snifferで確認すると「Sell restriction detected」と赤い警告が出ていた。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 6
+    "isRugged": false
   },
   {
     "caseId": "medium_rug_migration",
@@ -104,8 +96,7 @@
     "text": "Etherscanで移行コントラクトを確認すると、デプロイされたのは1時間前で監査なし。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 10
+    "isRugged": false
   },
   {
     "caseId": "medium_rug_migration",
@@ -116,8 +107,7 @@
     "text": "過去の同様のケースを調べると、V2移行を口実にした詐欺が多数報告されていた。",
     "type": "SAFE",
     "tone": "calm",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "medium_fake_partnership",
@@ -128,8 +118,7 @@
     "text": "LinkedInで確認すると、チームメンバーのプロフィールはすべてAI生成の偽画像だった。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 12
+    "isRugged": false
   },
   {
     "caseId": "medium_fake_partnership",
@@ -140,8 +129,7 @@
     "text": "プロジェクトの過去の発表を確認すると、何度も「提携」を匂わせては消えるパターンだった。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 7
+    "isRugged": false
   },
   {
     "caseId": "medium_compromised_discord",
@@ -152,8 +140,7 @@
     "text": "Twitterを確認すると、公式が「Discord侵害。リンクを開かないで」と緊急投稿していた。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "medium_compromised_discord",
@@ -164,8 +151,7 @@
     "text": "署名内容を確認すると、ミントではなくNFTの移転権限を要求していた。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 6
+    "isRugged": false
   },
   {
     "caseId": "hard_slow_rug",
@@ -176,8 +162,7 @@
     "text": "開発アップデートは週1で投稿されている。ロードマップも進行中に見える。",
     "type": "SAFE",
     "tone": "calm",
-    "isRugged": false,
-    "gain": 3
+    "isRugged": false
   },
   {
     "caseId": "hard_flash_loan_attack",
@@ -188,8 +173,7 @@
     "text": "有名監査会社の監査済み。TVL 50M。APYは年20%で安定している。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "hard_flash_loan_attack",
@@ -200,8 +184,7 @@
     "text": "事後分析で、攻撃者はオラクル価格を操作してから清算を実行したと判明。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 0
+    "isRugged": false
   },
   {
     "caseId": "hard_flash_loan_attack",
@@ -212,8 +195,7 @@
     "text": "同様の構造を持つ他のプロトコルからも資金を引き上げるユーザーが増加。",
     "type": "SAFE",
     "tone": "steady",
-    "isRugged": false,
-    "gain": 6
+    "isRugged": false
   },
   {
     "caseId": "hard_governance_attack",
@@ -224,8 +206,7 @@
     "text": "Treasury活用の提案が投票にかけられた。内容は合理的に見える。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 4
+    "isRugged": false
   },
   {
     "caseId": "hard_bridge_exploit",
@@ -236,8 +217,7 @@
     "text": "人気ブリッジプロトコル。累計100億ドルの資産が通過。監査も複数回実施済み。",
     "type": "SAFE",
     "tone": "formal",
-    "isRugged": false,
-    "gain": 3
+    "isRugged": false
   },
   {
     "caseId": "hard_bridge_exploit",
@@ -248,7 +228,156 @@
     "text": "事後分析で、攻撃者は秘密鍵を3つ入手していたと判明。要件緩和が致命傷だった。",
     "type": "SAFE",
     "tone": "formal",
+    "isRugged": false
+  },
+  {
+    "caseId": "safe_dogecoin_volatility",
+    "caseTitle": "Dogecoin の急騰/急落",
+    "caseDifficulty": "easy",
+    "caseType": "market_volatility",
+    "announcementIndex": 0,
+    "text": "ミーム人気により Dogecoin が急騰した後、自然に価格が急落している。",
+    "type": "SAFE",
+    "tone": "neutral",
     "isRugged": false,
-    "gain": 0
+    "learn": [
+      "ミーム人気による価格変動は需給・センチメント要因であり詐欺とは異なる。",
+      "長期保有者が恩恵を受ける可能性がある市場動意事象。"
+    ]
+  },
+  {
+    "caseId": "safe_bitcoin_etf_listing",
+    "caseTitle": "Bitcoin ETF 上場時の価格上昇",
+    "caseDifficulty": "easy",
+    "caseType": "market_event",
+    "announcementIndex": 0,
+    "text": "Bitcoin ETF の上場を受けて価格が上昇している。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ETF 上場は正規の市場イベントであり詐欺性はない。",
+      "新規参加者が流入する買い材料として働く可能性がある。"
+    ]
+  },
+  {
+    "caseId": "safe_uniswap_liquidity_growth",
+    "caseTitle": "Uniswap 初期流動性高騰",
+    "caseDifficulty": "easy",
+    "caseType": "dex_growth",
+    "announcementIndex": 0,
+    "text": "Uniswap の流動性が初期に大きく増えている。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "流動性増加はプロトコルへの信頼が高まっているサイン。",
+      "詐欺性はなく、正常な採用・利用動意である可能性が高い。"
+    ]
+  },
+  {
+    "caseId": "safe_chainlink_initial_growth",
+    "caseTitle": "Chainlink 初期価格上昇",
+    "caseDifficulty": "easy",
+    "caseType": "oracle_adoption",
+    "announcementIndex": 0,
+    "text": "Chainlink が需要増により価格上昇している。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ユースケースが需要増を生んでいる正常な成長を示す。",
+      "詐欺性は低く、中長期的な価値保持につながりうる。"
+    ]
+  },
+  {
+    "caseId": "safe_solana_trend",
+    "caseTitle": "Solana 初期急騰トレンド",
+    "caseDifficulty": "easy",
+    "caseType": "ecosystem_growth",
+    "announcementIndex": 0,
+    "text": "Solana エコシステムが拡大して価格が急騰している。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ネットワーク需要増加が価格上昇を支えている。",
+      "詐欺とは異なる正常な採用フェーズである可能性が高い。"
+    ]
+  },
+  {
+    "caseId": "safe_layer2_bridge_activity",
+    "caseTitle": "Layer2 ブリッジの活況",
+    "caseDifficulty": "easy",
+    "caseType": "infrastructure_usage",
+    "announcementIndex": 0,
+    "text": "Layer2 ブリッジの利用が増加している。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "インフラ利用増加はエコシステムの正常な成長を示す。",
+      "詐欺性は低いと判断できる。"
+    ]
+  },
+  {
+    "caseId": "safe_stablecoin_yield",
+    "caseTitle": "ステーブルコインの利回り生成",
+    "caseDifficulty": "easy",
+    "caseType": "stablecoin_yield",
+    "announcementIndex": 0,
+    "text": "ステーブルコインから利回りが得られている。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "仕組みが透明である場合、詐欺性は低い。",
+      "安定資産を活用した正常な収益機会。"
+    ]
+  },
+  {
+    "caseId": "safe_eth_fork_event",
+    "caseTitle": "Ethereum ハードフォーク動意",
+    "caseDifficulty": "easy",
+    "caseType": "protocol_upgrade",
+    "announcementIndex": 0,
+    "text": "Ethereum のハードフォーク後に価格が動意している。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "技術イベントが市場の関心を引き価格変動につながる事例。",
+      "詐欺性はない正常なプロトコル動意。"
+    ]
+  },
+  {
+    "caseId": "safe_defi_aggregator_rewards",
+    "caseTitle": "正規 DeFi アグリゲーター報酬",
+    "caseDifficulty": "easy",
+    "caseType": "yield_farming",
+    "announcementIndex": 0,
+    "text": "正規の DeFi アグリゲーターへの参加で報酬を得ている。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "透明性が高いプロトコルは詐欺性が低い。",
+      "長期的価値形成につながる可能性がある。"
+    ]
+  },
+  {
+    "caseId": "safe_nft_popular_art",
+    "caseTitle": "人気アーティスト NFT",
+    "caseDifficulty": "easy",
+    "caseType": "nft_market",
+    "announcementIndex": 0,
+    "text": "人気アーティストの NFT が市場で積極的に取引され価値を上げている。",
+    "type": "SAFE",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "コレクター需要が価格を支える正常な市場現象。",
+      "詐欺性は低いと判断できる。"
+    ]
   }
 ]

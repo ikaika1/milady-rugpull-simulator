@@ -8,8 +8,7 @@
     "text": "トークンのコントラクトを確認すると、売却時に99%の税金が設定されていた。",
     "type": "LOW_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 4
+    "isRugged": false
   },
   {
     "caseId": "medium_honeypot",
@@ -20,8 +19,7 @@
     "text": "DEXで買い注文を出すと問題なく通った。これは本物かもしれない。",
     "type": "LOW_RISK_REWARD",
     "tone": "tempting",
-    "isRugged": false,
-    "gain": 8
+    "isRugged": false
   },
   {
     "caseId": "medium_fake_partnership",
@@ -32,8 +30,7 @@
     "text": "Microsoftの公式発表を確認しようとするが、どこにも見つからない。",
     "type": "LOW_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "hard_slow_rug",
@@ -44,8 +41,7 @@
     "text": "よく見るとアップデートは既存機能の言い換えばかり。新機能は半年間リリースされていない。",
     "type": "LOW_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "hard_flash_loan_attack",
@@ -56,8 +52,7 @@
     "text": "オラクル価格の更新頻度が他のプロトコルより低いことにトレーダーが気づき始めた。",
     "type": "LOW_RISK_REWARD",
     "tone": "uncertain",
-    "isRugged": false,
-    "gain": 4
+    "isRugged": false
   },
   {
     "caseId": "hard_insider_trading",
@@ -68,8 +63,7 @@
     "text": "発表直後に大量の売りが入り、発表前の価格まで戻った。買いを入れたのは一般投資家だけだった。",
     "type": "LOW_RISK_REWARD",
     "tone": "tempting",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "hard_governance_attack",
@@ -80,8 +74,7 @@
     "text": "「パートナーウォレット」のアドレスを調べると、攻撃者本人のものだった。",
     "type": "LOW_RISK_REWARD",
     "tone": "tempting",
-    "isRugged": false,
-    "gain": 5
+    "isRugged": false
   },
   {
     "caseId": "hard_bridge_exploit",
@@ -92,7 +85,156 @@
     "text": "バリデーターの署名要件が5/9から3/9に変更される提案が静かに可決されていた。",
     "type": "LOW_RISK_REWARD",
     "tone": "hushed",
+    "isRugged": false
+  },
+  {
+    "caseId": "low_lido_rocketpool_staking",
+    "caseTitle": "Lido / Rocket Pool ステーキング",
+    "caseDifficulty": "medium",
+    "caseType": "staking",
+    "announcementIndex": 1,
+    "text": "Lido / Rocket Pool でステーキング報酬が安定的に得られている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
     "isRugged": false,
-    "gain": 6
+    "learn": [
+      "公式プロトコルであるため詐欺性は低い。",
+      "リスクは市場変動や流動性次第。"
+    ]
+  },
+  {
+    "caseId": "low_bitcoin_lending",
+    "caseTitle": "Bitcoin Lending の高利回り",
+    "caseDifficulty": "medium",
+    "caseType": "lending",
+    "announcementIndex": 1,
+    "text": "高利回りの Bitcoin Lending プロトコルに資金提供している。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "規制リスクはあるが詐欺性は低い。",
+      "運用内容を事前に確認することが重要。"
+    ]
+  },
+  {
+    "caseId": "low_nft_blue_chip",
+    "caseTitle": "Blue-chip NFT 価値保持",
+    "caseDifficulty": "medium",
+    "caseType": "nft_blue_chip",
+    "announcementIndex": 1,
+    "text": "Blue-chip NFT が安定して価値を保っている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ブランド人気による市場形成が背景。",
+      "詐欺性ではなく正常な価格形成。"
+    ]
+  },
+  {
+    "caseId": "low_mai_dai_stable_maintenance",
+    "caseTitle": "MAI/DAI ステーブル運用",
+    "caseDifficulty": "medium",
+    "caseType": "stablecoin_management",
+    "announcementIndex": 1,
+    "text": "MAI/DAI のステーブル運用で利回りが発生している。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ステーブル運用は価格変動リスクが小さくリスク低め。",
+      "詐欺性はないが仕組み理解が必要。"
+    ]
+  },
+  {
+    "caseId": "low_balancer_lp",
+    "caseTitle": "Balancer 流動性提供",
+    "caseDifficulty": "medium",
+    "caseType": "liquidity_provision",
+    "announcementIndex": 1,
+    "text": "Balancer プールに流動性を提供し報酬を得ている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "インパーマネントロスリスクはあるが詐欺性は低い。",
+      "透明性あるプロジェクトは比較的安全。"
+    ]
+  },
+  {
+    "caseId": "low_aave_liquidity",
+    "caseTitle": "Aave 流動性報酬",
+    "caseDifficulty": "medium",
+    "caseType": "yield_farming",
+    "announcementIndex": 1,
+    "text": "Aave で流動性提供から報酬を受け取っている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "大手 DeFi で一般的な報酬機会。",
+      "詐欺性は低いと判断できる。"
+    ]
+  },
+  {
+    "caseId": "low_sushiswap_staking",
+    "caseTitle": "SushiSwap ステーキング",
+    "caseDifficulty": "medium",
+    "caseType": "staking",
+    "announcementIndex": 1,
+    "text": "SushiSwap でステーキングしている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "大手 DEX のステーキング報酬。",
+      "詐欺性は低いが市場リスクはある。"
+    ]
+  },
+  {
+    "caseId": "low_curve_stable_lp",
+    "caseTitle": "Curve ステーブル LP 提供",
+    "caseDifficulty": "medium",
+    "caseType": "liquidity_provision",
+    "announcementIndex": 1,
+    "text": "Curve のステーブルペア LP に資金を入れている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "ステーブルペアは価格変動が抑制されている。",
+      "詐欺性は低いと判断できる。"
+    ]
+  },
+  {
+    "caseId": "low_avalanche_token",
+    "caseTitle": "Avalanche エコシステムトークン",
+    "caseDifficulty": "medium",
+    "caseType": "token_investment",
+    "announcementIndex": 1,
+    "text": "Avalanche エコシステムのトークンが取引で需要を保っている。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "エコシステム全体の健全性が価格を支える。",
+      "詐欺性は低く評価できる。"
+    ]
+  },
+  {
+    "caseId": "low_dex_prelisting",
+    "caseTitle": "DEX 上場前参加機会",
+    "caseDifficulty": "medium",
+    "caseType": "prelisting_opportunity",
+    "announcementIndex": 1,
+    "text": "大手 DEX の上場前イベントに参加している。",
+    "type": "LOW_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false,
+    "learn": [
+      "初期参加機会は報酬機会として正常な市場現象。",
+      "詐欺性は低いと評価されやすい。"
+    ]
   }
 ]

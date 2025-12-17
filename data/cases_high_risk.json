@@ -1,57 +1,350 @@
 [
   {
-    "case_id": "SQUID_GAME_TOKEN",
-    "name": "Squid Game Token Scam",
-    "type": "rug pull / exit scam",
-    "description": "人気IPを悪用したファンメイドトークン。急騰のあと売却ロック解除不能・創業者が失踪し価値急落。投資家は売却不可で大損失。救済は裁判や追跡次第で部分返還の可能性がある。",
-    "date": "2021-11",
-    "chain": "Ethereum/BSC",
-    "outcome": "価値ほぼゼロ（99%下落）",
-    "survival_scenario": "法執行機関やフォレンジック追跡により一部資金が差し戻されたケースが稀にある",
-    "sources": ["turn0search1", "turn0search45"]
+    "caseId": "high_squid_game",
+    "caseTitle": "Squid Game Token - 売れないトークン",
+    "caseDifficulty": "hard",
+    "caseType": "exit_scam",
+    "announcementIndex": 1,
+    "text": "Netflix人気作品をモチーフにしたトークン。Twitterで100万フォロワー突破。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "hype",
+    "isRugged": false
   },
   {
-    "case_id": "BORED_BUNNY_NFT",
-    "name": "Bored Bunny NFT Rug Pull",
-    "type": "NFT project rug pull",
-    "description": "有名人起用を謳ったNFTプロジェクトが立ち上がり売れた直後にプロジェクト側ウォレットが売却。Discord/Twitter閉鎖。多くの投資家が資金回収できず。",
-    "date": "2021-12",
-    "chain": "Ethereum",
-    "outcome": "NFTの価値急落／事実上の無価値化",
-    "survival_scenario": "模倣プロジェクトやコミュニティ側の再構築トークン配布等で若干の価値を再生する可能性あり",
-    "sources": ["turn0search1", "turn0search22"]
+    "caseId": "high_squid_game",
+    "caseTitle": "Squid Game Token - 売れないトークン",
+    "caseDifficulty": "hard",
+    "caseType": "exit_scam",
+    "announcementIndex": 2,
+    "text": "価格が1週間で2000%上昇。FOMO殺到でガス代高騰中。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "urgent",
+    "isRugged": false
   },
   {
-    "case_id": "SAVE_THE_KIDS_TOKEN",
-    "name": "Save the Kids Token",
-    "type": "pump-and-dump / rug pull-like",
-    "description": "チャリティトークンと宣伝されたがコード改変により売却制限が不利に働き、創業者や内部関係者が大量売却。価格急落・投資家大損。",
-    "date": "2021-06",
-    "chain": "BSC/PancakeSwap",
-    "outcome": "価値急落・取引停止",
-    "survival_scenario": "一部関係者が被害者への返金を約束した例もあり、訴訟や返還交渉で数%〜数十%の回収可能性あり",
-    "sources": ["turn0search41"]
+    "caseId": "high_squid_game",
+    "caseTitle": "Squid Game Token - 売れないトークン",
+    "caseDifficulty": "hard",
+    "caseType": "exit_scam",
+    "announcementIndex": 3,
+    "text": "Reddit投稿：「売ろうとしたらトランザクション失敗した」複数の報告あり。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "warning",
+    "isRugged": true
   },
   {
-    "case_id": "TEDDY_DOGE_RUG_PULL",
-    "name": "Teddy Doge Rug Pull",
-    "type": "DeFi rug pull / pump & dump",
-    "description": "クロスチェーン製品やNFTなどを謳って資金を集め、短期間で流動性マネジメントを行い流動性引き上げ後に急落。",
-    "date": "2025",
-    "chain": "BNB Chain",
-    "outcome": "投資家損失／トークン価値暴落",
-    "survival_scenario": "流動性ロック前の警告発生や先に脱出した少数の参加者が利益化するケースあり",
-    "sources": ["turn0search38"]
+    "caseId": "high_squid_game",
+    "caseTitle": "Squid Game Token - 売れないトークン",
+    "caseDifficulty": "hard",
+    "caseType": "exit_scam",
+    "announcementIndex": 4,
+    "text": "【速報】開発者が流動性を全て引き抜き。価格99%下落。売却不可のハニーポットだった。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "panic",
+    "isRugged": true
   },
   {
-    "case_id": "BUILD_FINANCE_DAO_COUPE",
-    "name": "Build Finance DAO Hostile Takeover",
-    "type": "DAO vulnerability exploited (rug pull-like)",
-    "description": "ガバナンストークン集中による悪意ある投票で保有資産を流出させた例。内部者行為に近いが一般的なrug pullと類似した結果に。",
-    "date": "2022-02",
-    "chain": "Ethereum-based DAO",
-    "outcome": "資金流出・DAO機能停止",
-    "survival_scenario": "DAOメンバー協調によるトークン再発行や再建が成功する場合あり",
-    "sources": ["turn0search46"]
+    "caseId": "high_celebrity_nft",
+    "caseTitle": "セレブ推しNFTプロジェクト",
+    "caseDifficulty": "hard",
+    "caseType": "celebrity_scam",
+    "announcementIndex": 1,
+    "text": "有名インフルエンサーが「人生変わる」と宣伝中。Discord 5万人。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "hype",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_celebrity_nft",
+    "caseTitle": "セレブ推しNFTプロジェクト",
+    "caseDifficulty": "hard",
+    "caseType": "celebrity_scam",
+    "announcementIndex": 2,
+    "text": "ミント完売。フロア価格2ETH突破。セカンダリー市場も活況。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "fomo",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_celebrity_nft",
+    "caseTitle": "セレブ推しNFTプロジェクト",
+    "caseDifficulty": "hard",
+    "caseType": "celebrity_scam",
+    "announcementIndex": 3,
+    "text": "運営ウォレットがミント収益を全てDEXで売却開始。Twitter削除中。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "warning",
+    "isRugged": true
+  },
+  {
+    "caseId": "high_charity_token",
+    "caseTitle": "慈善トークンの裏側",
+    "caseDifficulty": "hard",
+    "caseType": "charity_scam",
+    "announcementIndex": 1,
+    "text": "「子供たちを救う」トークン。YouTuberが熱心に紹介中。税金の一部が寄付される仕組み。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "emotional",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_charity_token",
+    "caseTitle": "慈善トークンの裏側",
+    "caseDifficulty": "hard",
+    "caseType": "charity_scam",
+    "announcementIndex": 2,
+    "text": "コントラクト解析：開発者がいつでも売却税率を変更できる関数を発見。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "technical",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_charity_token",
+    "caseTitle": "慈善トークンの裏側",
+    "caseDifficulty": "hard",
+    "caseType": "charity_scam",
+    "announcementIndex": 3,
+    "text": "売却税が突然99%に変更。保有者は売却不能に。インフルエンサーは内部者だった疑惑。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "panic",
+    "isRugged": true
+  },
+  {
+    "caseId": "high_dao_takeover",
+    "caseTitle": "DAO乗っ取り - Build Finance事件",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 1,
+    "text": "分散型ガバナンス採用のDAO。コミュニティ投票で意思決定。TVL $1M。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "formal",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_dao_takeover",
+    "caseTitle": "DAO乗っ取り - Build Finance事件",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 2,
+    "text": "新しい提案が投票中。内容は「Treasury運用の効率化」。一見合理的。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_dao_takeover",
+    "caseTitle": "DAO乗っ取り - Build Finance事件",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 3,
+    "text": "【警告】単一ウォレットがガバナンストークンの過半数を取得。敵対的買収の兆候。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "warning",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_dao_takeover",
+    "caseTitle": "DAO乗っ取り - Build Finance事件",
+    "caseDifficulty": "hard",
+    "caseType": "governance_attack",
+    "announcementIndex": 4,
+    "text": "投票が可決。攻撃者がTreasury全額を自身のウォレットに移動。DAO機能停止。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "panic",
+    "isRugged": true
+  },
+  {
+    "caseId": "high_meme_pump",
+    "caseTitle": "次のPEPE - 100倍ミームコイン",
+    "caseDifficulty": "hard",
+    "caseType": "pump_dump",
+    "announcementIndex": 1,
+    "text": "新しいカエルミーム登場。「PEPEを超える」とTelegram炎上中。24h取引量$50M。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "hype",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_meme_pump",
+    "caseTitle": "次のPEPE - 100倍ミームコイン",
+    "caseDifficulty": "hard",
+    "caseType": "pump_dump",
+    "announcementIndex": 2,
+    "text": "Binance上場の噂が拡散中。価格は1日で10倍に。まだ間に合うとの声。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "fomo",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_meme_pump",
+    "caseTitle": "次のPEPE - 100倍ミームコイン",
+    "caseDifficulty": "hard",
+    "caseType": "pump_dump",
+    "announcementIndex": 3,
+    "text": "オンチェーン分析：上位10ウォレットが供給の80%を保有。すべて同一時刻に購入。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "warning",
+    "isRugged": false
+  },
+  {
+    "caseId": "high_meme_pump",
+    "caseTitle": "次のPEPE - 100倍ミームコイン",
+    "caseDifficulty": "hard",
+    "caseType": "pump_dump",
+    "announcementIndex": 4,
+    "text": "大口ウォレットが一斉売却。価格95%暴落。Binance上場は偽情報だった。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "panic",
+    "isRugged": true
+  },
+  {
+    "caseId": "high_squid_game_token",
+    "caseTitle": "Squid Game Token Rug Pull",
+    "caseDifficulty": "extreme",
+    "caseType": "memecoin_rugpull",
+    "announcementIndex": 3,
+    "text": "人気 IP 名義のトークンが急騰後に売却されて価格が暴落している。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "急騰直後の大量売却はラグプルの典型的パターン。",
+      "需給崩壊で価格が戻らない可能性。"
+    ]
+  },
+  {
+    "caseId": "high_bitconnect",
+    "caseTitle": "BitConnect Rug Pull 事件",
+    "caseDifficulty": "extreme",
+    "caseType": "ponzi_rugpull",
+    "announcementIndex": 3,
+    "text": "BitConnect が高利回りを謳い急騰した後に暴落した。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "保証された高利回りは詐欺サインとなりうる。",
+      "急落後の回復余地は非常に低い。"
+    ]
+  },
+  {
+    "caseId": "high_thodex_exit",
+    "caseTitle": "Thodex 取引所 Exit Scam",
+    "caseDifficulty": "extreme",
+    "caseType": "exchange_exit",
+    "announcementIndex": 3,
+    "text": "Thodex が運営停止し、ユーザー資金が引出不能になっている。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "取引所運営停止は全損につながるリスクが高い。",
+      "詐欺性が明らかになる場合が多い。"
+    ]
+  },
+  {
+    "caseId": "high_africrypt_disappearance",
+    "caseTitle": "Africrypt 運営消失事件",
+    "caseDifficulty": "extreme",
+    "caseType": "platform_disappearance",
+    "announcementIndex": 3,
+    "text": "Africrypt の運営者が失踪し巨額資金が消失している。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "管理者不在は回収余地を著しく低下させる。",
+      "明確な詐欺構造が確認される場合がある。"
+    ]
+  },
+  {
+    "caseId": "high_plustoken_scam",
+    "caseTitle": "PlusToken 詐欺事件",
+    "caseDifficulty": "extreme",
+    "caseType": "wallet_ponzi",
+    "announcementIndex": 3,
+    "text": "PlusToken が高利誘引型詐欺として大量資金を消失させた。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "大規模な誘引型スキームは回収困難になる傾向。",
+      "詐欺性が高く価格回復が難しい。"
+    ]
+  },
+  {
+    "caseId": "high_gainbitcoin_ponzi",
+    "caseTitle": "GainBitcoin Ponzi 事件",
+    "caseDifficulty": "extreme",
+    "caseType": "bitcoin_ponzi",
+    "announcementIndex": 3,
+    "text": "GainBitcoin が高利誘引型詐欺として報告されている。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "高利保証は詐欺サインとして機能する。",
+      "投資者資金が戻らない例が多い。"
+    ]
+  },
+  {
+    "caseId": "high_centra_tech_ico",
+    "caseTitle": "Centra Tech ICO 詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "ico_scam",
+    "announcementIndex": 3,
+    "text": "Centra Tech ICO が偽 ICO と判定され資金が失われた。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "偽 ICO は詐欺構造として分類されやすい。",
+      "透明性がなく投資者が損失を被る。"
+    ]
+  },
+  {
+    "caseId": "high_mirror_trading_intl",
+    "caseTitle": "Mirror Trading Intl 詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "ponzi_platform",
+    "announcementIndex": 3,
+    "text": "Mirror Trading International が大規模詐欺として報告されている。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "大規模 Ponzi スキームは価格回復が困難。",
+      "詐欺性が明確で投資者損失が大きい。"
+    ]
+  },
+  {
+    "caseId": "high_wotoken_scam",
+    "caseTitle": "WoToken 詐欺",
+    "caseDifficulty": "extreme",
+    "caseType": "wallet_scam",
+    "announcementIndex": 3,
+    "text": "WoToken がウォレット詐欺として資金を消失させた。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "偽ウォレットは資金持ち逃げリスクが高い。",
+      "技術的／運営的欠陥が詐欺につながる例。"
+    ]
+  },
+  {
+    "caseId": "high_thodex_exchange_loss",
+    "caseTitle": "他取引所 Exit Scam 例",
+    "caseDifficulty": "extreme",
+    "caseType": "exchange_exit",
+    "announcementIndex": 3,
+    "text": "ある取引所が突然閉鎖し資金が引出不能になったケースがある。",
+    "type": "HIGH_RISK_REWARD",
+    "tone": "neutral",
+    "isRugged": true,
+    "learn": [
+      "運営者消失は致命的な損失リスク。",
+      "回収可能性が非常に低い。"
+    ]
   }
 ]

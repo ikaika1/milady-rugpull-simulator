@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Announcement } from '@/lib/engine'
+import { Announcement, INITIAL_FUNDS } from '@/lib/engine'
 
 interface SoldModalProps {
   tokenName: string
@@ -18,12 +18,13 @@ export default function SoldModal({ tokenName, chartValue, announcement, onNext 
     return () => clearTimeout(timer)
   }, [])
 
-  const profit = Math.round(chartValue - 100)
-  const profitLabel = profit >= 0 ? `+${profit}` : `${profit}`
+  const profit = Math.round(chartValue - INITIAL_FUNDS)
+  const profitLabel = profit >= 0 ? `+$${profit.toLocaleString()}` : `-$${Math.abs(profit).toLocaleString()}`
 
   // HODLしていた場合の結果を判定
   const wouldHaveRugged = announcement.hodl.outcome === 'RUGGED'
-  const potentialGain = announcement.hodl.gain
+  // JSON 側で gain が欠けている可能性があるため安全に扱う
+  const potentialGain = typeof announcement.hodl.gain === 'number' ? announcement.hodl.gain : 0
 
   return (
     <div
@@ -45,10 +46,10 @@ export default function SoldModal({ tokenName, chartValue, announcement, onNext 
             {wouldHaveRugged ? '完璧な利確' : '早売り'}
           </p>
           <p className="text-white text-3xl font-bold">
-            {chartValue} pts
+            ${Math.round(chartValue).toLocaleString()}
           </p>
           <p className="text-gray-400 text-sm font-mono">
-            損益: {profitLabel}%
+            損益: {profitLabel}
           </p>
 
           {/* HODLしていた場合の結果 */}
@@ -65,7 +66,7 @@ export default function SoldModal({ tokenName, chartValue, announcement, onNext 
             ) : (
               <>
                 <p className="text-yellow-400 text-sm font-bold">
-                  HODLしていたら +{potentialGain}% だった
+                  HODLしていたら +${potentialGain.toLocaleString()} だった
                 </p>
                 <p className="text-yellow-300/70 text-xs font-mono mt-1">
                   利益を逃したが、生き残ることが最優先。

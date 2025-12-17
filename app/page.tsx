@@ -6,13 +6,19 @@ export default function StartPage() {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-6">
+    <div
+      className="min-h-screen bg-black text-white flex items-center justify-center p-6"
+      style={{
+        backgroundImage: 'url(/images/bag_zero.png)',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="w-full max-w-3xl border border-gray-800 rounded-3xl p-8 bg-gray-950/70 backdrop-blur">
         <div className="text-center mb-10 space-y-3">
-          <p className="text-xs text-gray-500 font-mono tracking-[0.4em]">
-            MILADY RUGPULL SIMULATOR
-          </p>
-          <h1 className="text-5xl md:text-6xl font-black tracking-tight">ULTRATHINK</h1>
+
+          <h1 className="text-5xl md:text-6xl font-black tracking-tight">MILADY RUGPULL SIMULATOR</h1>
           <p className="text-sm text-gray-400 font-mono">
             A Deterministic Announcement-Driven Trading Simulator
           </p>
@@ -22,7 +28,7 @@ export default function StartPage() {
           <div className="space-y-3">
             <p className="text-gray-300 text-sm leading-relaxed">
               流れるのは「信じたくなるアナウンス」だけ。SAFE でも BAIT でも、表には確率もメーターも出ない。
-              判断材料はテキストのトーンのみ。HODL で夢を見るか、TAKE PROFIT で次のトークンに逃げるか。
+              判断材料はテキストのトーンのみ。HODL で夢を見るか、SELL で次のトークンに逃げるか。
             </p>
             <p className="text-red-400 text-sm font-semibold">
               欲を選べばゼロ。利確した者だけが進む。
@@ -35,9 +41,9 @@ export default function StartPage() {
             </h2>
             <ul className="text-gray-300 text-sm space-y-2">
               <li>• Token 開始 {'->'} アナウンスが順番に流れる</li>
-              <li>• すべてのテキストで HODL or TAKE PROFIT の二択</li>
+              <li>• すべてのテキストで HODL or SELL の二択</li>
               <li>• HODL 成功でチャート上昇。失敗は即 RUGGED</li>
-              <li>• TAKE PROFIT は利確して次の Token へ進行</li>
+              <li>• SELL は利確して次の Token へ進行</li>
               <li>• Token が進むほど SAFE は減り、誘惑だけが増える</li>
             </ul>
           </div>

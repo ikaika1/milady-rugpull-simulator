@@ -7,6 +7,26 @@ import casesHighRisk from './cases_high_risk.json'
 
 export type Difficulty = 'easy' | 'medium' | 'hard'
 
+// タイプ別のゲイン範囲（100の倍数で生成）
+const GAIN_RANGES: Record<AnnouncementType, { min: number; max: number }> = {
+  SAFE: { min: 300, max: 1200 },
+  BAIT: { min: 0, max: 0 },
+  LOW_RISK_REWARD: { min: 1500, max: 3000 },
+  MIDDLE_RISK_REWARD: { min: 5000, max: 10000 },
+  HIGH_RISK_REWARD: { min: 10000, max: 20000 },
+}
+
+// タイプに応じたゲインを生成（100の倍数）
+function generateGain(type: AnnouncementType): number {
+  const { min, max } = GAIN_RANGES[type]
+  if (min === 0 && max === 0) return 0
+  // 100の倍数で乱数を生成
+  const minStep = Math.ceil(min / 100)
+  const maxStep = Math.floor(max / 100)
+  const step = Math.floor(Math.random() * (maxStep - minStep + 1)) + minStep
+  return step * 100
+}
+
 // JSONファイルの各エントリの型
 interface RawAnnouncement {
   caseId: string
@@ -18,7 +38,6 @@ interface RawAnnouncement {
   type: AnnouncementType
   tone: string
   isRugged: boolean
-  gain: number
   learn?: string[]
 }
 
@@ -69,7 +88,7 @@ function buildTokenScenarios(): Map<string, TokenScenario> {
       tone: ann.tone,
       hodl: ann.isRugged
         ? { outcome: 'RUGGED' as const, gain: -100 }
-        : { outcome: 'GAIN' as const, gain: ann.gain },
+        : { outcome: 'GAIN' as const, gain: generateGain(ann.type) },
       learn: ann.learn,
     }))
 

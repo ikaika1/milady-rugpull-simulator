@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Suspense } from 'react'
-import { getTitle, getScoreMessage } from '@/lib/engine'
+import { getTitle, getScoreMessage, INITIAL_FUNDS } from '@/lib/engine'
 
 // 結果表示コンポーネント
 function ResultContent() {
@@ -11,13 +11,13 @@ function ResultContent() {
 
   const survived = parseInt(searchParams.get('survived') || '0', 10)
   const total = parseInt(searchParams.get('total') || '4', 10)
-  const chartValue = parseInt(searchParams.get('value') || '100', 10)
+  const chartValue = parseInt(searchParams.get('value') || String(INITIAL_FUNDS), 10)
 
   const title = getTitle(survived, total)
   const message = getScoreMessage(survived, total, chartValue)
   const isPerfect = survived === total
-  const profit = chartValue - 100
-  const profitLabel = `${profit >= 0 ? '+' : ''}${profit}%`
+  const profit = chartValue - INITIAL_FUNDS
+  const profitLabel = profit >= 0 ? `+$${profit.toLocaleString()}` : `-$${Math.abs(profit).toLocaleString()}`
 
   const handleRetry = () => {
     router.push('/play')
@@ -28,7 +28,7 @@ function ResultContent() {
   }
 
   const handleShare = () => {
-    const text = `ULTRATHINK: ${title} (${survived}/${total}) / Chart ${profitLabel}\n情報ではなく利確のタイミングを選ぶ決定論シミュレーター。`
+    const text = `ULTRATHINK: ${title} (${survived}/${total}) / $${chartValue.toLocaleString()} (${profitLabel})\n情報ではなく利確のタイミングを選ぶ決定論シミュレーター。`
     if (navigator.share) {
       navigator.share({ text })
     } else {

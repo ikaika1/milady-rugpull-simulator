@@ -1,48 +1,59 @@
-export type ActionChoice = 'HODL' | 'SELL'
+// 型をtypes.tsからインポート・再エクスポート
+export type {
+  ActionChoice,
+  AnnouncementType,
+  HodlEffect,
+  Announcement,
+  TokenScenario,
+  GameStatus,
+  OutcomeLabel,
+  GameState,
+} from './types'
 
-export type AnnouncementType =
-  | 'SAFE'
-  | 'BAIT'
-  | 'LOW_RISK_REWARD'
-  | 'MIDDLE_RISK_REWARD'
-  | 'HIGH_RISK_REWARD'
+import type {
+  ActionChoice,
+  Announcement,
+  TokenScenario,
+  GameState,
+  OutcomeLabel,
+  AnnouncementType,
+  HodlEffect,
+} from './types'
 
-export interface HodlEffect {
-  outcome: 'GAIN' | 'RUGGED'
-  gain: number
+// タイプ別の成功確率
+export const SUCCESS_RATES: Record<AnnouncementType, number> = {
+  SAFE: 1.0,           // 100% - 常に成功
+  BAIT: 0.0,           // 0% - 常に失敗（RUGGED）
+  LOW_RISK_REWARD: 0.9,    // 90%
+  MIDDLE_RISK_REWARD: 0.7, // 70%
+  HIGH_RISK_REWARD: 0.5,   // 50%
 }
 
-export interface Announcement {
-  id: string
-  text: string
-  type: AnnouncementType
-  tone: string
-  hodl: HodlEffect
-  learn?: string[]
+// タイプ別の成功時ゲイン範囲
+const GAIN_RANGES: Record<AnnouncementType, { min: number; max: number }> = {
+  SAFE: { min: 1000, max: 2000 },
+  BAIT: { min: 0, max: 0 },
+  LOW_RISK_REWARD: { min: 2000, max: 5000 },
+  MIDDLE_RISK_REWARD: { min: 10000, max: 20000 },
+  HIGH_RISK_REWARD: { min: 20000, max: 30000 },
 }
 
-export interface TokenScenario {
-  id: string
-  name: string
-  description: string
-  announcements: Announcement[]
+// タイプに応じたHODL結果を生成（アナウンス生成時に利用）
+export function createHodlEffect(type: AnnouncementType): HodlEffect {
+  const successRate = SUCCESS_RATES[type]
+  const roll = Math.random()
+
+  if (roll < successRate) {
+    const { min, max } = GAIN_RANGES[type]
+    const gain = Math.floor(Math.random() * (max - min + 1)) + min
+    return { outcome: 'GAIN', gain }
+  }
+
+  return { outcome: 'RUGGED', gain: -100 }
 }
 
-export type GameStatus = 'RUNNING' | 'RUGGED' | 'COMPLETED'
-export type OutcomeLabel = 'GAIN' | 'LOSS' | 'PROFIT' | null
-
-export interface GameState {
-  tokenIndex: number
-  announcementIndex: number
-  survivedTokens: number
-  totalTokens: number
-  chartValue: number
-  chartHistory: number[]
-  status: GameStatus
-  lastAction: ActionChoice | null
-  lastOutcome: OutcomeLabel
-  lastAnnouncement: Announcement | null
-}
+// 初期資金（ドル）
+export const INITIAL_FUNDS = 10000
 
 export function createInitialState(totalTokens: number): GameState {
   return {
@@ -50,8 +61,10 @@ export function createInitialState(totalTokens: number): GameState {
     announcementIndex: 0,
     survivedTokens: 0,
     totalTokens,
-    chartValue: 100,
-    chartHistory: [100],
+    chartValue: INITIAL_FUNDS,
+    chartHistory: [INITIAL_FUNDS],
+    tokenGain: 0,  // トークン開始時は0
+    tokenGainHistory: [0],  // 初期値0から開始
     status: 'RUNNING',
     lastAction: null,
     lastOutcome: null,
@@ -89,6 +102,8 @@ function advanceToNextToken(options: AdvanceOptions): GameState {
     announcementIndex: 0,
     chartValue,
     chartHistory,
+    tokenGain: 0,  // 次のトークンでリセット
+    tokenGainHistory: [0],  // 次のトークンでリセット
     survivedTokens,
     status: hasMoreTokens ? 'RUNNING' : 'COMPLETED',
     lastAction: action,
@@ -119,12 +134,15 @@ export function processAction(
   }
 
   if (action === 'SELL') {
-    const gain = announcement.type === 'SAFE' ? 8 : 0
-    const chartValue = state.chartValue + gain
+    // SELLは安全に利確。SAFEタイプなら小さなボーナス
+    const sellGain = announcement.type === 'SAFE' ? 8 : 0
+    const chartValue = state.chartValue + sellGain
     const chartHistory = [...state.chartHistory, chartValue]
+    const tokenGain = state.tokenGain + sellGain
+    const tokenGainHistory = [...state.tokenGainHistory, tokenGain]
 
     return advanceToNextToken({
-      state,
+      state: { ...state, tokenGain, tokenGainHistory },
       tokens,
       chartValue,
       chartHistory,
@@ -134,25 +152,33 @@ export function processAction(
     })
   }
 
-  if (announcement.hodl.outcome === 'RUGGED') {
+  // HODL: 事前に生成された結果を利用
+  const hodlResult = announcement.hodl
+
+  if (hodlResult.outcome === 'RUGGED') {
     return {
       ...state,
       status: 'RUGGED',
       chartValue: 0,
       chartHistory: [...state.chartHistory, 0],
+      tokenGain: -100,  // RUGGEDは-100%
+      // tokenGainHistoryは更新しない（CandleChartがisRuggedでキャンドルを追加する）
       lastAction: action,
       lastOutcome: 'LOSS',
       lastAnnouncement: announcement,
     }
   }
 
-  const chartValue = state.chartValue + announcement.hodl.gain
+  // 成功: ゲインを獲得
+  const chartValue = state.chartValue + hodlResult.gain
   const chartHistory = [...state.chartHistory, chartValue]
+  const tokenGain = state.tokenGain + hodlResult.gain
+  const tokenGainHistory = [...state.tokenGainHistory, tokenGain]
   const isLastAnnouncement = state.announcementIndex >= token.announcements.length - 1
 
   if (isLastAnnouncement) {
     return advanceToNextToken({
-      state,
+      state: { ...state, tokenGain, tokenGainHistory },
       tokens,
       chartValue,
       chartHistory,
@@ -167,6 +193,8 @@ export function processAction(
     announcementIndex: state.announcementIndex + 1,
     chartValue,
     chartHistory,
+    tokenGain,
+    tokenGainHistory,
     lastAction: action,
     lastOutcome: 'GAIN',
     lastAnnouncement: announcement,
@@ -215,8 +243,8 @@ export function getScoreMessage(
     return '最初のアナウンスで欲に乗った。情報ではなく行動が結果を決める。'
   }
 
-  const profit = Math.round(chartValue - 100)
-  const formatted = profit >= 0 ? `+${profit}` : `${profit}`
+  const profit = Math.round(chartValue - INITIAL_FUNDS)
+  const formatted = profit >= 0 ? `+$${profit.toLocaleString()}` : `-$${Math.abs(profit).toLocaleString()}`
 
-  return `${survivedTokens}/${totalTokens} トークン生存。損益 ${formatted}%。利確が遅れるほど危険は増す。`
+  return `${survivedTokens}/${totalTokens} トークン生存。損益 ${formatted}。利確が遅れるほど危険は増す。`
 }

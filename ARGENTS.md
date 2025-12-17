@@ -69,9 +69,9 @@ TAKE PROFIT（利確）
 type	意味
 SAFE	HODLしても問題ない（微伸び・確定）
 BAIT	HODLすると即死
-HIGH_RISK_REWARD	成功率30％・成功時爆伸び
+HIGH_RISK_REWARD	成功率30％・成功時爆伸9
 MIDDLE_RISK_REWARD	成功率50％・成功時伸び
-LOW_RISK_REWARD	成功率20％・成功時少伸び
+LOW_RISK_REWARD	成功率90％・成功時少伸び
 
 ※ プレイヤーには type / 成功率は一切表示されない
 ※ SAFE 以外は すべて死亡リスクを含む
