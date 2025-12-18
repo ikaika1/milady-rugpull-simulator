@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@farcaster/miniapp-sdk": "^0.2.1",
+    "@tonejs/midi": "^2.0.28",
     "next": "^15.5.9",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "tone": "^15.1.22"
   },
   "devDependencies": {
     "@types/node": "^20",

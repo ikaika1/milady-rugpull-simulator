@@ -8,6 +8,7 @@ import RuggedModal from '@/components/RuggedModal'
 import SoldModal from '@/components/SoldModal'
 import CompletionModal from '@/components/CompletionModal'
 import CandleChart from '@/components/CandleChart'
+import BGMPlayer from '@/components/BGMPlayer'
 import {
   ActionChoice,
   GameState,
@@ -286,6 +287,9 @@ export default function PlayPage() {
     <div
       className="min-h-screen bg-black text-white overflow-hidden relative"
     >
+      {/* BGMをランダムに再生（RUGGED時は停止） */}
+      <BGMPlayer enabled={!showRugged} volume={0.3} />
+
       {showRugged && gameState.lastAnnouncement && (
         <RuggedModal
           announcement={gameState.lastAnnouncement}
