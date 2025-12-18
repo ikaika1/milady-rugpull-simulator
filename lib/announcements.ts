@@ -83,18 +83,20 @@ interface AnnouncementDistribution {
 
 const DIFFICULTY_CURVES: Record<number, AnnouncementDistribution> = {
   // Token 1: SAFE多, BAIT無, LOW少, MIDDLE少, HIGH無
-  1: { SAFE: 3, BAIT: 0, LOW_RISK_REWARD: 1, MIDDLE_RISK_REWARD: 1, HIGH_RISK_REWARD: 0 },
+  1: { SAFE: 1, BAIT: 0, LOW_RISK_REWARD: 1, MIDDLE_RISK_REWARD: 1, HIGH_RISK_REWARD: 2 },
   // Token 2: SAFE多, BAIT無, LOW少, MIDDLE少, HIGH無
   2: { SAFE: 3, BAIT: 0, LOW_RISK_REWARD: 1, MIDDLE_RISK_REWARD: 1, HIGH_RISK_REWARD: 0 },
   // Token 3: SAFE多, BAIT少, LOW中, MIDDLE少, HIGH少
   3: { SAFE: 2, BAIT: 1, LOW_RISK_REWARD: 2, MIDDLE_RISK_REWARD: 1, HIGH_RISK_REWARD: 1 },
   // Token 4+: SAFE多, BAIT少, LOW中, MIDDLE中, HIGH少
   4: { SAFE: 2, BAIT: 1, LOW_RISK_REWARD: 2, MIDDLE_RISK_REWARD: 2, HIGH_RISK_REWARD: 1 },
+  // Token 5+: SAFE多, BAIT少, LOW中, MIDDLE中, HIGH少
+  5: { SAFE: 2, BAIT: 1, LOW_RISK_REWARD: 2, MIDDLE_RISK_REWARD: 1, HIGH_RISK_REWARD: 2 },
 }
 
 // トークン番号に基づいて難易度曲線を取得
 function getDistribution(tokenNumber: number): AnnouncementDistribution {
-  if (tokenNumber >= 4) return DIFFICULTY_CURVES[4]
+  if (tokenNumber >= 5) return DIFFICULTY_CURVES[5]
   return DIFFICULTY_CURVES[tokenNumber] || DIFFICULTY_CURVES[1]
 }
 
