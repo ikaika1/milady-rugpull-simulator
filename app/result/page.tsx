@@ -28,7 +28,7 @@ function ResultContent() {
   }
 
   const handleShare = () => {
-    const text = `ULTRATHINK: ${title} (${survived}/${total}) / $${chartValue.toLocaleString()} (${profitLabel})\n情報ではなく利確のタイミングを選ぶ決定論シミュレーター。`
+    const text = `${title} (${survived}/${total}) / $${chartValue.toLocaleString()} (${profitLabel})\n情報ではなく利確のタイミングを選ぶ決定論シミュレーター。`
     if (navigator.share) {
       navigator.share({ text })
     } else {
@@ -118,7 +118,7 @@ function ResultContent() {
       {isPerfect && (
         <div className="mt-8 max-w-sm text-center">
           <p className="text-gray-500 text-xs">
-            慎重さが生存の鍵。安全は退屈だが、退屈こそが安全。
+            慎重さが生存の鍵。生き残ることが投資の極意。
           </p>
         </div>
       )}

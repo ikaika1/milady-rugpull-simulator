@@ -34,7 +34,7 @@ export default function CompletionModal({ chartValue, onContinue, onEnd }: Compl
         </div>
 
         <p className="text-gray-300 text-sm leading-relaxed">
-          欲に勝ち続けた。ここで終わるか、もう5トークン分のブロードキャストに挑戦するかを選べ。
+          欲に勝ち続けた。ここで終わるか、もう5トークン分のブロードキャストに挑戦するかを選択せよ。
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
