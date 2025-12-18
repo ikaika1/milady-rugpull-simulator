@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="antialiased">
-        <main className="min-h-screen bg-black">
+        <main className="min-h-[100dvh] bg-black">
           {children}
         </main>
       </body>

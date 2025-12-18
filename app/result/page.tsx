@@ -38,7 +38,7 @@ function ResultContent() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="min-h-[100dvh] flex flex-col items-center justify-center p-4">
       {/* 結果表示 */}
       <div className="text-center mb-8">
         {/* 称号 */}
@@ -130,7 +130,7 @@ function ResultContent() {
 export default function ResultPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-[100dvh] flex items-center justify-center">
         <div className="text-gray-500">読み込み中...</div>
       </div>
     }>

@@ -7,7 +7,7 @@ export default function StartPage() {
 
   return (
     <div
-      className="min-h-screen bg-black text-white flex items-center justify-center p-6"
+      className="min-h-[100dvh] bg-black text-white flex items-center justify-center p-6"
       style={{
         backgroundImage: 'url(/images/bag_zero.png)',
         backgroundSize: 'contain',

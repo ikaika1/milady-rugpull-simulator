@@ -38,6 +38,8 @@ export default function PlayPage() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [pulseChart, setPulseChart] = useState(false)
   const [showCompletionChoice, setShowCompletionChoice] = useState(false)
+  const [bgmReloadTrigger, setBgmReloadTrigger] = useState(0)
+  const [bgmStarted, setBgmStarted] = useState(false)
 
   // Farcaster MiniApp SDK の初期化
   useEffect(() => {
@@ -157,6 +159,8 @@ export default function PlayPage() {
 
   const handleSoldNext = () => {
     setShowSold(false)
+    // 新しいBGMをロード
+    setBgmReloadTrigger(prev => prev + 1)
     // COMPLETEDの場合はresultページに遷移
     if (gameState.status === 'COMPLETED') {
       if (gameState.survivedTokens >= totalTokens) {
@@ -201,7 +205,7 @@ export default function PlayPage() {
 
   if (shouldShowCompletion) {
     return (
-      <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <div className="min-h-[100dvh] bg-black text-white overflow-y-auto relative">
         <CompletionModal
           chartValue={gameState.chartValue}
           onContinue={handleContinueAfterClear}
@@ -214,7 +218,15 @@ export default function PlayPage() {
   // showSold表示中は、tokenIndexが進んでいてもエラー画面を出さずにモーダルを表示する
   if (showSold && soldAnnouncement) {
     return (
-      <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <div className="min-h-[100dvh] bg-black text-white overflow-y-auto relative">
+        {/* BGMPlayerを維持（ゲーム実行中のみ再生） */}
+        <BGMPlayer
+          enabled={gameState.status === 'RUNNING'}
+          volume={0.3}
+          reloadTrigger={bgmReloadTrigger}
+          isStarted={bgmStarted}
+          onStarted={() => setBgmStarted(true)}
+        />
         <SoldModal
           tokenName={soldTokenName}
           chartValue={gameState.chartValue}
@@ -228,7 +240,7 @@ export default function PlayPage() {
   // scenariosがまだロードされていない場合はローディング
   if (scenarios.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-black gap-4">
+      <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-black gap-4">
         <div className="text-gray-500 font-mono">Loading scenarios...</div>
       </div>
     )
@@ -243,7 +255,7 @@ export default function PlayPage() {
       survivedTokens: prev.survivedTokens,
     }))
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="min-h-[100dvh] flex items-center justify-center bg-black">
         <div className="text-gray-500 font-mono">Processing...</div>
       </div>
     )
@@ -262,7 +274,7 @@ export default function PlayPage() {
     console.error('アナウンス取得失敗:', debugInfo)
 
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-black gap-4">
+      <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-black gap-4">
         <div className="text-gray-500 font-mono">アナウンスを待機中...</div>
         <div className="text-xs text-gray-700 font-mono">
           tokens: {scenarios.length}, idx: {gameState.tokenIndex}, status: {gameState.status}
@@ -285,10 +297,16 @@ export default function PlayPage() {
 
   return (
     <div
-      className="min-h-screen bg-black text-white overflow-hidden relative"
+      className="min-h-[100dvh] bg-black text-white overflow-y-auto relative"
     >
-      {/* BGMをランダムに再生（RUGGED時は停止） */}
-      <BGMPlayer enabled={!showRugged} volume={0.3} />
+      {/* BGMをランダムに再生（ゲーム実行中のみ、Next Token時に再ロード） */}
+      <BGMPlayer
+        enabled={gameState.status === 'RUNNING'}
+        volume={0.3}
+        reloadTrigger={bgmReloadTrigger}
+        isStarted={bgmStarted}
+        onStarted={() => setBgmStarted(true)}
+      />
 
       {showRugged && gameState.lastAnnouncement && (
         <RuggedModal
@@ -315,7 +333,7 @@ export default function PlayPage() {
         />
       )}
 
-      <div className="h-screen flex flex-col p-4 gap-4">
+      <div className="min-h-[100dvh] flex flex-col p-4 gap-4 pb-20">
         <header className="space-y-1">
           <div className="flex items-center justify-between text-xs text-gray-500 font-mono tracking-wider">
             <span>{currentToken.name}</span>

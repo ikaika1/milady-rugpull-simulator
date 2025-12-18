@@ -8,7 +8,7 @@ YOUR
 
 ## デモ
 
-- **アプリURL**: https://example.com
+- **アプリURL**: https://milady-rugpull-simulator.vercel.app
 - **スライド**: https://example.com (Google Slides等)
 - **デモ動画**(任意): https://example.com (YouTube/Loom等)
 
