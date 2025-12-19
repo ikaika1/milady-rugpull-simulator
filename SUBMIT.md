@@ -33,7 +33,7 @@ SELLかHODLかどちらを選択するか？　
 
 ## チームメンバー
 
-- ikaika (Devloper) - [@GitHub](https://github.com/ikaika1), [@Discord](ikaika7491)
+- ikaika (Devloper) - GitHub(https://github.com/ikaika1), Discord(ikaika7491)
 
 ---
 
