@@ -12,7 +12,7 @@
     "splashImageUrl": "https://milady-rugpull-simulator.vercel.app/images/bag_zero.png",
     "splashBackgroundColor": "#000000",
     "subtitle": "ラグプル教育シミュレーター",
-    "description": "実例ベースのラグプル/ハック教育シミュレーター。情報ではなく、利確のタイミングを選べ。",
+    "description": "実例ベースのラグプルとハックの教育シミュレーター。情報ではなく、利確のタイミングを選べ。",
     "screenshotUrls": [],
     "primaryCategory": "games",
     "tags": [
@@ -24,7 +24,7 @@
     "heroImageUrl": "https://milady-rugpull-simulator.vercel.app/images/bag_zero.png",
     "tagline": "情報ではなく、利確のタイミングを選べ。",
     "ogTitle": "MILADY RUGPULL SIMULATOR",
-    "ogDescription": "実例ベースのラグプル/ハック教育シミュレーター",
+    "ogDescription": "実例ベースのラグプルとハックの教育シミュレーター",
     "ogImageUrl": "https://milady-rugpull-simulator.vercel.app/images/bag_zero.png",
     "noindex": false
   }
