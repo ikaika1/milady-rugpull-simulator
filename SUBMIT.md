@@ -4,25 +4,28 @@ milady-rugpull-simulator
 
 ## 概要
 
-YOUR
+YOUR BAGS ARE GOING TO ZERO を味わうことのできるラグプル/ハック教育暴落シミュレーター 
+SELLかHODLかどちらを選択するか？　
+10000ドルからスタート、あらゆる危機を生き残り資産を増加させよ
+
 
 ## デモ
 
 - **アプリURL**: https://milady-rugpull-simulator.vercel.app
-- **スライド**: https://example.com (Google Slides等)
+- **スライド**: https://docs.google.com/presentation/d/e/2PACX-1vTdkQX6hEERqaUUKRHMSfbuJb53Y2kCJvZxs96LZ6hA91RKNrm8kgaLRPOg8icYKHCaKeMqszlrUPts/pub?start=false&loop=false&delayms=3000 (Google Slides)
 - **デモ動画**(任意): https://example.com (YouTube/Loom等)
 
 ## 推しポイント
 
 1. **ポイント1**
-   - 説明
+   - ラグが発生したときのチャートのローソク足が一気にゼロになる衝撃
 
 2. **ポイント2**
-   - 説明
+   - 実例ベースなので暗号資産投資の教育にも
 
 ## 使用技術(もしこだわりがあれば)
 
-- **フロントエンド**:
+- **フロントエンド**: Next.js
 - **バックエンド**:
 - **データベース**:
 - **インフラ**:
@@ -30,7 +33,7 @@ YOUR
 
 ## チームメンバー
 
-- 名前 (役割) - @GitHub, @Discord
+- ikaika (Devloper) - [@GitHub](https://github.com/ikaika1), [@Discord](ikaika7491)
 
 ---
 
