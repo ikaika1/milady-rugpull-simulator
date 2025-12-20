@@ -1,9 +1,19 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { sdk } from '@farcaster/miniapp-sdk'
 
 export default function StartPage() {
   const router = useRouter()
+
+  // Farcaster MiniApp SDK の初期化
+  useEffect(() => {
+    const init = async () => {
+      await sdk.actions.ready()
+    }
+    init()
+  }, [])
 
   return (
     <div
