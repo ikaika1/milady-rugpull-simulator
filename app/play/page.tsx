@@ -43,7 +43,10 @@ export default function PlayPage() {
 
   // Farcaster MiniApp SDK の初期化
   useEffect(() => {
-    sdk.actions.ready()
+    const init = async () => {
+      await sdk.actions.ready()
+    }
+    init()
   }, [])
 
   // 初回マウント時にシナリオを生成
