@@ -12,8 +12,8 @@ SELLかHODLかどちらを選択するか？　
 ## デモ
 
 - **アプリURL**: https://milady-rugpull-simulator.vercel.app
-                 https://farcaster.xyz/miniapps/J3oqkzeWaMBu/milady-rugpull-simulator
-                 base.app/app/milady-rugpull-simulator.vercel.app
+farcaster:       https://farcaster.xyz/miniapps/J3oqkzeWaMBu/milady-rugpull-simulator
+base.app:        https://base.app/app/milady-rugpull-simulator.vercel.app
 - **スライド**: https://docs.google.com/presentation/d/e/2PACX-1vTdkQX6hEERqaUUKRHMSfbuJb53Y2kCJvZxs96LZ6hA91RKNrm8kgaLRPOg8icYKHCaKeMqszlrUPts/pub?start=false&loop=false&delayms=3000 (Google Slides)
 - **デモ動画**(任意): https://example.com (YouTube/Loom等)
 
